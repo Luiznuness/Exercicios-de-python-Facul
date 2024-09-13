@@ -38,8 +38,8 @@ def saque_reais(valor):
                 reais['1']+=1
             else:
                 if valor < 1 and valor > 0:
-                    valor = round(valor, 2)
-                    valor = saque_centavos(valor)
+                    if round(valor, 2) >= 0.1:
+                        valor = saque_centavos(valor)
                 else:
                     print("Esse valor nós não temos, sinto muito !!")
                     break    
@@ -47,6 +47,8 @@ def saque_reais(valor):
     for vezes, valores in reais.items():
         if valores != 0:
             print(f'Você acabou de sacar {valores} notas de {vezes} !')
+
+
 
 def saque_centavos(valor):
     centavos = {"0.01": 0, "0.02": 0, "0.05": 0, "0.10": 0, "0.50": 0}
