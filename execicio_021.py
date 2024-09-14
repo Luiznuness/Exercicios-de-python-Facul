@@ -14,12 +14,14 @@ def ex_16_refresh():
     print()
 
     valor = float(input("Digite o valor que vc deseja sacar: "))
-    banco(valor=valor)
 
     while valor != 0:
-        valor = float(input("Digite o valor que vc deseja sacar: "))
         banco(valor=valor)
+        valor = float(input("Digite o valor que vc deseja sacar: "))
 
+    print()
+    print('Você acabou de sair do programa !!')
+    print('Até a próxima ;)')
 
 if "__main__" == __name__:
     ex_16_refresh()

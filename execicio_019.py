@@ -40,6 +40,9 @@ def saque_reais(valor):
                 if valor < 1 and valor > 0:
                     if round(valor, 2) >= 0.1:
                         valor = saque_centavos(valor)
+                    else:
+                        print("Esse valor nós não temos, sinto muito !!")
+                        break    
                 else:
                     print("Esse valor nós não temos, sinto muito !!")
                     break    
