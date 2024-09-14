@@ -11,4 +11,6 @@ from execicio_019 import banco
 
 
 if "__main__" == __name__:
+
     banco(valor=0.001)
+    
